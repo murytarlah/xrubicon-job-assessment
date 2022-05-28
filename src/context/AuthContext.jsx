@@ -1,18 +1,16 @@
-import React, { createContext, Component} from "react";
 
-export const AuthContext = createContext();
+import { createContext, useState } from "react";
 
-class AuthContextProvider extends Component {
-  state = { 
-    email: '',
-    password: '',
-    isLoggedIn: false,
-    isLoading: false,
-  }
+const AuthContext = createContext({});
 
-  render() { 
-    return ();
-  }
+export const AuthProvider = ({ children }) => {
+    const [auth, setAuth] = useState({});
+
+    return (
+        <AuthContext.Provider value={{ auth, setAuth }}>
+            {children}
+        </AuthContext.Provider>
+    )
 }
- 
-export default AuthContextProvider;
+
+export default AuthContext;

@@ -3,7 +3,6 @@ import { Icon } from '@iconify/react';
 import '../styles/FormInput.scss';
 
 const FormInput = (props) => {
-	const [value, setValue] = useState(props.value);
 
 	const [toggle, setToggle] = useState(props.toggle);
 	const handleToggle = () => {
@@ -19,7 +18,7 @@ const FormInput = (props) => {
 					props.type ==='password' && toggle 
 						? props.type: 
 						props.type !=='password' ? props.type:'text'} checked={props.checked}  disabled={props.type === 'radio' ? true: false}
-						 name={props.name} placeholder={props.placeholder} id={props.label.toLowerCase()} value={value} onChange={(e) => setValue(e.target.value)}/>	
+						 name={props.name} placeholder={props.placeholder} id={props.label.toLowerCase()} value={props.value} onClick={()=> props.type === 'submit' && props.valueChange} onChange={props.valueChange}/>	
 				<span>
 				<Icon icon={
 					typeof props.icon === 'string'
