@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+.signup{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  height: 100vh;
+  .slider{
+    align-self: center;
+    justify-self: center;
+    > div{
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  .content{
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > div{
+      width: 80%;
+      margin: 0 auto;
+      form{
+        >div.grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 650px){
+        form{
+          >div.grid{
+            display: block;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      } 
+      h1{
+        font-size: 2rem;
+        color: $primaryColor;
+        padding: 0.95rem 0.75rem;
+      }
+      p{
+        text-align: center;
+        a{
+          color: $primaryColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px){
+  .signup{ 
+    .content{
+      > div{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px){
+  .signup{
+    grid-template-columns: 1fr;
+    .slider{
+      display: none;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .content{
+      > div{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

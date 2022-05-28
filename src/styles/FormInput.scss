@@ -1,0 +1,71 @@
+@import './variables.scss';
+
+.formControl{
+  &.radio{
+    padding: .30rem .75rem;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    > *{
+      width: fit-content;
+    }
+    label{
+      margin-left: 1rem;
+    }
+    div{
+      input{
+        width: 100%;
+        &:checked {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+  box-sizing: border-box;
+  display: flex ;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  padding: .80rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  div{ 
+    width: 100%;
+    position: relative;
+    input{
+      width: inherit;
+      box-sizing: border-box;
+      font-size: .85rem;
+      padding: .55rem .55rem;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      background: $inputBackgroundColor;
+      margin: .20rem 0rem;
+    }
+    input[type="submit"]{
+      width: 100%;
+      margin: .35rem 0rem;
+      background-color: $secondaryColor;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    &::placeholder{
+      color: $placeholderColor;
+    }
+    &:focus-visible{
+      outline: 0;
+    }
+    span{
+      position: absolute;
+      top: 30%;
+      right: 1%;
+      justify-content: center;
+      align-items: center;
+      svg{
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

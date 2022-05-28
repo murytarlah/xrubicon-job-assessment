@@ -1,0 +1,36 @@
+@import '../styles/variables.scss';
+
+.carousel div{
+  margin: 50px 0;
+  color: $white;
+}
+
+p{
+  font-weight: 100;
+}
+
+.carousel-slider{
+  .control-dots {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 3px solid #f1f1f1;
+      margin: 0 5px;
+      background: #f1f1f1;
+      &.selected {
+        width: 16px;
+        height: 16px;
+        background: rgb(32, 32, 32);
+        border: 5px solid #f1f1f1;
+      }
+    }
+  }
+}

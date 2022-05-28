@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+.login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  height: 100vh;
+  .slider{
+    align-self: center;
+    justify-self: center;
+    > div{
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  .content{
+    background: $white;
+    display: flex;
+    > div{
+      align-self: center;
+      width: 80%;
+      margin: 0 auto;
+      h1{
+        font-size: 2rem;
+        color: $primaryColor;
+        padding: 0.95rem 0.75rem;
+      }
+      p{
+        text-align: center;
+        a{
+          color: $primaryColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .login{
+    grid-template-columns: 1fr;
+    .slider{
+      display: none;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .content{
+      > div{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px){
+  .login{ 
+    .content{
+      > div{
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

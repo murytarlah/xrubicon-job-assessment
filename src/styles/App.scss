@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+*{
+  font-size: 1vw;
+}
+
+body{
+  background-color: $primaryColor;
+}
+
+@media screen{
+  *{
+    font-size: 1rem;
+  }
+}
